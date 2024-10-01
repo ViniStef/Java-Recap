@@ -7,6 +7,6 @@ public class CalculatorTest03 {
         Calculator calculator = new Calculator();
         double result = calculator.divideTwoNumbers(20, 2);
         System.out.println(result);
-        System.out.println(calculator.divideTwoNumbers(20, 2));
+        calculator.printTwoNumbersDivided(20, 0);
     }
 }
