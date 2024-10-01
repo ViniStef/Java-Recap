@@ -18,9 +18,16 @@ public class StudentTest01 {
         student02.gender = 'F';
 
         printer.print(student01);
-        System.out.println("---------------");
         printer.print(student02);
+        System.out.println("#################");
+        printer.print(student01);
+        printer.print(student02);
+        // IMPORTANT
+        // Every time we are passing an argument that is of a primitive type, we are sending a copy of the bits of the
+        // value the variable holds
 
+        // When we are sending a reference(Object)(reference variable), we are sending the reference that the reference
+        // variable is having to the object
 
     }
 }
