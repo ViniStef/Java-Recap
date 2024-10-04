@@ -1,9 +1,10 @@
 package academy.devdojo.javaoneforall.javacore.Bintroductionmethods.domain;
 
 public class Employee {
-    public String name;
-    public int age;
-    public double[] salary;
+    private String name;
+    private int age;
+    private double[] salary;
+    private double averageSalary;
 
     public Employee(String name, int age, double[] salary) {
         this.name = name;
@@ -21,10 +22,13 @@ public class Employee {
         for (int i = 0;i < salary.length; i++) {
             System.out.println("Salary " + (i+1) + " " + salary[i]);
         }
+
+        calculateAndPrintAverageSalary();
     }
 
     public void calculateAndPrintAverageSalary() {
-        double averageSalary = 0;
+        if (this.salary == null) return;
+
         for (double salaryValue: salary) {
             averageSalary += salaryValue;
         }
@@ -33,4 +37,33 @@ public class Employee {
 
         System.out.println("Average Salary is " + averageSalary);
     }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public double[] getSalary() {
+        return salary;
+    }
+
+    public void setSalary(double[] salary) {
+        this.salary = salary;
+    }
+
+    public double getAverageSalary() {
+        return averageSalary;
+    }
+
 }
