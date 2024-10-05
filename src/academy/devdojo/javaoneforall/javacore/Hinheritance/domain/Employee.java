@@ -8,6 +8,10 @@ public class Employee {
     protected Address address;
     protected double salary;
 
+    public Employee(String name) {
+        this.name = name;
+    }
+
     public void print() {
         System.out.println(this.name);
         System.out.println(this.socialSecurityNumber);
