@@ -1,10 +1,12 @@
 package academy.devdojo.javaoneforall.javacore.Hinheritance.domain;
 
 public class Employee {
-    private String name;
-    private String socialSecurityNumber;
-    private Address address;
-    private double salary;
+    // When using protect, all sub classes extending this class will have access to the attributes by using this.name, for example.
+    // All other classes within this package, even if they're not extending this one, can also achieve the same.
+    protected String name;
+    protected String socialSecurityNumber;
+    protected Address address;
+    protected double salary;
 
     public void print() {
         System.out.println(this.name);
