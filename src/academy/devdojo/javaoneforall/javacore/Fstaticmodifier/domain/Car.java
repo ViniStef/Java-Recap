@@ -17,6 +17,14 @@ public class Car {
         System.out.println("Speed limit " + Car.speedLimit);
     }
 
+    public static double getSpeedLimit() {
+        return Car.speedLimit;
+    }
+
+    public static void setSpeedLimit(double speedLimit) {
+        Car.speedLimit = speedLimit;
+    }
+
     public String getName() {
         return name;
     }
