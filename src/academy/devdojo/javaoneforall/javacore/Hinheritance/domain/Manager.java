@@ -3,8 +3,19 @@ package academy.devdojo.javaoneforall.javacore.Hinheritance.domain;
 public class Manager extends Employee{
     private String department;
 
+    static {
+        System.out.println("Inside manager static init block");
+    }
+    {
+        System.out.println("Inside manager non-static init block 1");
+    }
+    {
+        System.out.println("Inside manager non-static init block 2");
+    }
+
     public Manager(String name) {
         super(name);
+        System.out.println("Inside manager constructor");
     }
 
     @Override

@@ -1,15 +1,26 @@
 package academy.devdojo.javaoneforall.javacore.Hinheritance.domain;
 
 public class Employee {
-    // When using protect, all sub classes extending this class will have access to the attributes by using this.name, for example.
+    // When using protect, all subclasses extending this class will have access to the attributes by using this.name, for example.
     // All other classes within this package, even if they're not extending this one, can also achieve the same.
     protected String name;
     protected String socialSecurityNumber;
     protected Address address;
     protected double salary;
 
+    static {
+        System.out.println("Inside employee static init block");
+    }
+    {
+        System.out.println("Inside employee non-static init block 1");
+    }
+    {
+        System.out.println("Inside employee non-static init block 2");
+    }
+
     public Employee(String name) {
         this.name = name;
+        System.out.println("Inside employee constructor");
     }
 
     public void print() {
