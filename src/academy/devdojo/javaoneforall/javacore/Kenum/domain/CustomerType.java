@@ -13,6 +13,15 @@ public enum CustomerType {
         this.reportValue = reportValue;
     }
 
+    public static CustomerType getByReportValue(String reportValue) {
+        for (CustomerType value : values()) {
+            if (value.getReportValue().equalsIgnoreCase(reportValue)) {
+                return value;
+            }
+        }
+        return null;
+    }
+
     public int getDbValue() {
         return dbValue;
     }

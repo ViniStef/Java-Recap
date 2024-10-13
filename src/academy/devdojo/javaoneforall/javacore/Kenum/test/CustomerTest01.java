@@ -12,6 +12,8 @@ public class CustomerTest01 {
         System.out.println(customer2);
         System.out.println(PaymentType.CREDIT.calculateDiscount(100));
         System.out.println(PaymentType.DEBIT.calculateDiscount(100));
+        CustomerType customerType = CustomerType.getByReportValue("individual");
+        System.out.println(customerType.getReportValue());
 
     }
 }
