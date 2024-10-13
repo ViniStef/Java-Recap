@@ -1,21 +1,21 @@
 package academy.devdojo.javaoneforall.javacore.Labstractclasses.domain;
 
-public class Manager extends Employee{
+public class Developer extends Employee{
 
-    public Manager(String name, double salary) {
+    public Developer(String name, double salary) {
         super(name, salary);
     }
 
+    @Override
     public void calculateSalaryBonus() {
-        this.salary = this.salary + this.salary * 0.05;
+        this.salary = this.salary + this.salary * 0.1;
     }
 
     @Override
     public String toString() {
-        return "Manager{" +
+        return "Developer{" +
                 "name='" + name + '\'' +
                 ", salary=" + salary +
                 '}';
     }
-
 }
