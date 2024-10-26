@@ -9,6 +9,15 @@ public class Smartphone {
         this.name = name;
     }
 
+    // if x.equals(y) == true, y.hashCode() == x.hashCode()
+    // y.hashCode() == x.hashCode(), doesn't mean that y.equals(x) == true
+    // x.equals(y) == false
+    // y.hashCode() != x.hashCode(), then x.equals(y) should be false
+    @Override
+    public int hashCode() {
+        return serialNumber == null ? 0 : serialNumber.hashCode();
+    }
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) return false;
