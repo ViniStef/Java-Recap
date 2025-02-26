@@ -16,6 +16,7 @@ public class StreamTest05 {
                 .flatMap(Arrays::stream) // Stream<String>
                 .collect(Collectors.toList());
 
+        
         System.out.println(collect);
 
     }
